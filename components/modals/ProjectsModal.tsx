@@ -30,7 +30,7 @@ function ProjectsModal() {
         <div className="flex flex-row absolute bottom-0 inset-x-0  h-20">
             <div
                 className="absolute inset-y-0 flex flex-row items-center justify-center gap-3 border-text border-[1px] border-opacity-60 w-1/2 h-full cursor-pointer hover:text-beige hover:border-beige "
-                onClick={e=>{projectsModal.prev();ProjectsModal.slidePrev()}}
+                onClick={e=>{projectsModal.prev();projectsModal.slidePrev()}}
             >
                 <FaChevronLeft />
                 previous
