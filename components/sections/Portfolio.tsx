@@ -10,7 +10,7 @@ import 'slick-carousel/slick/slick-theme.css'
 
 
 function Portfolio() {
-    const sliderRef = useRef<HTMLDivElement | null>(null)
+    const sliderRef = useRef<any>(null)
     
     // const child = useRef<HTMLElement | null>(null)
     const projectsModal = useProjectsModal()
@@ -27,8 +27,8 @@ function Portfolio() {
     //     sliderRef.current.scrollLeft -= 500
     // }
     const handlePrev = () => {
-        if (sliderRef?.current?.slickPrev) {
-            sliderRef.current.slickPrev()
+        if ((sliderRef?.current as any).slickPrev) {
+            (sliderRef.current as any).slickPrev()
             // setCurrentIndex((currentIndex - 1 + jobs.length)%jobs.length)
         }
     }
@@ -40,16 +40,16 @@ function Portfolio() {
     // }
 
     const handleNext = ()=>{
-        if(sliderRef?.current?.slickNext) 
+        if((sliderRef?.current as any).slickNext) 
         {
-            sliderRef.current.slickNext();
+            (sliderRef.current as any).slickNext();
             // setCurrentIndex((currentIndex + 1)%jobs.length)
         }
     }
 
-    const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => null
+    const SlickArrowLeft = ({ currentSlide, slideCount, ...props }:any) => null
 
-    const SlickArrowRight = ({ currentSlide, slideCount, ...props }) =>
+    const SlickArrowRight = ({ currentSlide, slideCount, ...props }:any) =>
         null
         // <button
         //     {...props}

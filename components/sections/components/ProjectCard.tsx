@@ -19,15 +19,15 @@ const ProjectCard:React.FC<Project>= ({
     const handleClick = ()=>{
         projectsModal.onOpen(index)
     }
-    const mouseDownCoords = e => {
-    window.checkForDrag = e.clientX;
-  };
+    const mouseDownCoords = (e: any) => {
+        ;(window as any).checkForDrag = e.clientX
+    }
 
-    const clickOrDrag = e => {
+    const clickOrDrag = (e:any) => {
     const mouseUp = e.clientX;
     if (
-      mouseUp < window.checkForDrag + 6 &&
-      mouseUp > window.checkForDrag - 6
+      mouseUp < (window as any).checkForDrag + 6 &&
+      mouseUp > (window as any).checkForDrag - 6
     ) {
       handleClick();
     }}
