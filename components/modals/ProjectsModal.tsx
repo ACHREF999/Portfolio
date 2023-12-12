@@ -22,7 +22,7 @@ function ProjectsModal() {
                     fill
                 />
             </div>
-            <p className="">{currentProject.description}</p>
+            <p className="text-lg lg:text-xl leading-8 pt-4">{currentProject.description}</p>
         </div>
     )
 
@@ -40,7 +40,7 @@ function ProjectsModal() {
             </div>
 
             <div
-                className="absolute inset-y-0 flex flex-row items-center justify-end gap-3 right-0 border-text border-[1px] border-opacity-60 cursor-pointer font-bold text-xl  hover:border-beige hover:text-beige w-1/2 h-full"
+                className="absolute inset-y-0 flex flex-row items-center justify-end gap-3 right-0 pr-12 border-text border-[1px] border-opacity-60 cursor-pointer font-bold text-xl  hover:border-beige hover:text-beige w-1/2 h-full"
                 onClick={(e) => {
                     projectsModal.slideNext()
                     projectsModal.next()
