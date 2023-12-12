@@ -72,6 +72,16 @@ function Portfolio() {
         prevArrow: <SlickArrowRight />,
         speed: 450,
         variableWidth: true,
+        responsive:[
+            {
+            breakpoint:720,
+            settings:{
+                slidesToShow:1,
+                slidesToScroll:1,
+
+            }
+            }
+        ]
         // beforeChange: (current, next) => {
         //     setCurrentIndex(next)
         // },
@@ -115,7 +125,7 @@ function Portfolio() {
                 >
                     {projectsModal.projects.map((project, index) => (
                         <ProjectCard
-                            image={'/projectImage.jpg'}
+                            image={project.image}
                             links={project.links}
                             key={project.title}
                             tags={project.tags}
