@@ -72,16 +72,17 @@ function Portfolio() {
         prevArrow: <SlickArrowRight />,
         speed: 450,
         variableWidth: true,
-        responsive:[
+        autoplay: true,
+        autoplaySpeed: 7000,
+        responsive: [
             {
-            breakpoint:720,
-            settings:{
-                slidesToShow:1,
-                slidesToScroll:1,
-
-            }
-            }
-        ]
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
         // beforeChange: (current, next) => {
         //     setCurrentIndex(next)
         // },
@@ -117,7 +118,7 @@ function Portfolio() {
             </div>
 
             {/* List */}
-            <div className="relative w-full h-full hide-scroll-bar flex flex-row flex-nowrap overflow-x-scroll items-start scroll-smooth snap-x  transition-all duration-300">
+            <div className="relative w-full h-full max-h-[40vh] overflow-y-hidden hide-scroll-bar flex flex-row flex-nowrap overflow-x-scroll items-start scroll-smooth snap-x  transition-all duration-300">
                 <Slider
                     {...sliderSettings}
                     ref={sliderRef}

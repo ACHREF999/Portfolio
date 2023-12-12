@@ -44,7 +44,7 @@ const Modal: React.FC<ModalProps> = ({
                     onClick={handleClose}
                 >
                     <div
-                        className={`absolute bg-[#1D1B19] rounded-md   px-4 py-8 lg:px-6 lg:py-6 lg:max-w-5xl ${fgStyling}  transition-all ${pannelAnimation} `}
+                        className={`absolute  bg-[#1D1B19] rounded-md   px-4 py-10 lg:px-6 lg:py-6 lg:max-w-5xl ${fgStyling}  transition-all ${pannelAnimation} `}
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/*Header */}

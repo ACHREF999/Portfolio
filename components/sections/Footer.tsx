@@ -12,7 +12,7 @@ function Footer() {
     return (
       <div className="absolute flex flex-row justify-between items-center w-full inset-x-0 py-2 pt-4 bottom-0 border-t-[1px] border-text ">
           <div className="w-[50%] ">
-              Copyright @ 2023 . All rights reserved.
+              Copyright @ 2023 . All rights rizzerved.
               <br />
               Developed by{' '}
               <span className="text-title hover:underline hover:text-orange-200 cursor-default">

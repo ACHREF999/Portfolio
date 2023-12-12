@@ -33,7 +33,7 @@ const expl = [
     },
     {
         title: 'ProgLang ',
-        image: '/projectImage.jpg',
+        image: '/pythonLego.jpg',
         description: 'asdsadasdasd',
         tags: ['Python', 'OOP'],
         links: ['https://github.com/ACHREF999/ProgLang'],
@@ -92,13 +92,13 @@ const useProjectsModal = create<ProjectsStore>((set) => ({
             active:
                 state.active < state.projects.length - 1
                     ? state.active + 1
-                    : state.active ,
+                    : 0,
         })),
     // prev: () => set((state) => ({  active: ((state.active - 1 + state.projects.length)%state.projects.length )})),
     prev: () =>
         set((state) => ({
             ...state,
-            active: state.active > 0 ? state.active - 1 : state.active,
+            active: state.active > 0 ? state.active - 1 : state.projects.length-1,
         })),
     registerSlideNext: (foo) => set((state) => ({ ...state, slideNext: foo })),
     registerSlidePrev: (foo) => set((state) => ({ ...state, slidePrev: foo })),

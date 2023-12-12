@@ -17,6 +17,13 @@ export default function RootLayout({
     return (
         <html lang="en" >
             <body>
+                <svg className="hidden svgContainer">
+                    
+                    <filter id="noise">
+                        <feTurbulence baseFrequency="0.25"/>
+                    </filter>
+
+                </svg>
                 <Toaster   position="bottom-center"/>
                 <NavBar />
                 <div className="mt-20">

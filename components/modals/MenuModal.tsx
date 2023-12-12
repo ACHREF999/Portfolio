@@ -115,7 +115,7 @@ function MenuModal() {
           footer={footerContent}
           onOpen={menuModal.onOpen}
           onClose={menuModal.onClose}
-          fgStyling={`right-0 top-0 h-full pb-8 w-full lg:w-[40%] overflow-y-hidden `}
+          fgStyling={`right-0 top-0 h-full pb-10 w-full lg:w-[40%] overflow-y-hidden `}
           pannelAnimation={` animate-sideMenu`}
       />
   )
