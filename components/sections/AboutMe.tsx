@@ -56,7 +56,7 @@ function AboutMe() {
                     ))}
                 </div>
 
-                <Link download href="/CV_ACHREF_SOUDA.pdf" className="w-[30%] max-lg:w-full py-6 border-text hover:border-beige hover:text-beige border-[1px] flex flex-col items-center transition text-semibold text-xl lg:mx-8 group">
+                <Link download href="/CV_ACHREF_SOUDA.pdf" target='_blank' className="w-[30%] max-lg:w-full py-6 border-text hover:border-beige hover:text-beige border-[1px] flex flex-col items-center transition text-semibold text-xl lg:mx-8 group">
                     <PiDownloadLight
                         size={64}
                         className="group-hover:scale-105 transition-transform"
