@@ -2,7 +2,7 @@
 import {FormEvent, useCallback, useState} from 'react'
 import toast from 'react-hot-toast'
 import { RiSendPlane2Line } from 'react-icons/ri'
-
+import send from '@/lib/resend'
 function Contact() {
     const [info,setInfo] = useState({
         name:'',
@@ -19,7 +19,7 @@ function Contact() {
                 /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
             )
     },[])
-    const handleSubmit = (e:FormEvent)=>{
+    const handleSubmit = async (e:FormEvent)=>{
         e.preventDefault()
         
         let errMsg = ''
@@ -46,6 +46,8 @@ function Contact() {
             })
         }
         else{
+                await send(info)
+
                 toast.success('Form Was Sent!', {
                     style: {
                         marginTop:"6px",
