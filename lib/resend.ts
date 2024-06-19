@@ -8,7 +8,7 @@ export default async function send(info:any){
     //     subject:'',
     //     message:''
     await sender.emails.send({
-        to: 'achrefsouda1@gmail.com',
+        to: 'achrefdouda1@gmail.com',
         from: 'onboarding@resend.dev',
         subject: 'Portfolio Contact Message',
         html: `<!doctype html>
@@ -202,7 +202,7 @@ export default async function send(info:any){
                                         <td align="center" style="font-size:0px;padding:10px 25px;padding-bottom:40px;word-break:break-word;">
 
                                             <div style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:28px;font-weight:bold;line-height:1;text-align:center;color:#555;">
-                                                Welcome to {{Product}}
+                                                Welcome to ${info.name} contact message
                                             </div>
 
                                         </td>
@@ -213,9 +213,11 @@ export default async function send(info:any){
 
                                             <div style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;text-align:left;color:#555;">
                                                 Hello ${info.name}!<br></br>
-                                                Thank ${info.email} for Sending Us Info.
+                                                Thank <strong>${info.email}</strong> for Sending Us Info.
                                                 We're really happy to have you!
+                                                </br>
                                                 <strong>${info.subject}</strong>
+                                                </br>
                                                 </br>
                                                 <p>
                                                 ${info.message}
