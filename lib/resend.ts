@@ -10,7 +10,7 @@ export default async function send(info:any){
     await sender.emails.send({
         to: 'achrefdouda1@gmail.com',
         from: 'onboarding@resend.dev',
-        subject: 'Portfolio Contact Message',
+        subject: `Portfolio Contact Message <${info.email}>`,
         html: `<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
