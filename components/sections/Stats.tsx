@@ -12,8 +12,15 @@ import {
     SiTypescript,
     SiExpress,
 } from 'react-icons/si'
-import { FaNodeJs, FaReact, FaPython, FaCuttlefish ,FaCss3 ,FaHtml5  } from 'react-icons/fa'
-import { IoLogoJavascript } from "react-icons/io5";
+import {
+    FaNodeJs,
+    FaReact,
+    FaPython,
+    FaCuttlefish,
+    FaCss3,
+    FaHtml5,
+} from 'react-icons/fa'
+import { IoLogoJavascript } from 'react-icons/io5'
 interface SkillCardProps {}
 
 const SkillCard = () => {}
@@ -105,24 +112,24 @@ function Stats() {
         },
         {
             label: 'CSS3',
-            icon: FaCss3 ,
+            icon: FaCss3,
             fgColor: 'hover:text-blue-400',
             bgColor: 'hover:bg-title',
         },
 
         {
             label: 'HTML5',
-            icon: FaHtml5  ,
+            icon: FaHtml5,
             fgColor: 'hover:text-orange-500',
             bgColor: 'hover:bg-title',
         },
 
         {
-            label:'JavaScript',
-            icon:IoLogoJavascript,
-            fgColor:"hover:text-black",
-            bgColor:"hover:bg-yellow-400",
-        }
+            label: 'JavaScript',
+            icon: IoLogoJavascript,
+            fgColor: 'hover:text-black',
+            bgColor: 'hover:bg-yellow-400',
+        },
     ]
     const [active, setActive] = useState(0)
     return (
@@ -157,51 +164,59 @@ function Stats() {
             </div>
 
             {/* Skills Section */}
-            {active===0&&(
-            <div className="flex flex-row flex-wrap gap-3 lg:gap-6 mt-6 transition-all">
-              {skills.map((item)=>(
-                <div key={item.label} className={`p-1 px-2 text-md sm:text-xl lg:p-3 lg:px-6 bg-darkCardBg w-fit text-md flex flex-col cursor-default ${item.fgColor} ${item.bgColor} transition shadow-lg hover:shadow-2xl `}>
-                    <item.icon size={20} />
-                    {item.label}
-
+            {active === 0 && (
+                <div className="flex flex-row flex-wrap gap-3 lg:gap-6 mt-6 transition-all">
+                    {skills.map((item) => (
+                        <div
+                            key={item.label}
+                            className={`p-1 px-2 text-md sm:text-xl lg:p-3 lg:px-6 bg-darkCardBg w-fit text-md flex flex-col cursor-default ${item.fgColor} ${item.bgColor} transition shadow-lg hover:shadow-2xl `}
+                        >
+                            <item.icon size={20} />
+                            {item.label}
+                        </div>
+                    ))}
                 </div>
-              ))}
-            </div>)}
+            )}
 
             {/* Experience Section */}
             {active === 1 && (
                 <div className="flex flex-col gap-6">
                     <XPCard
-                        title="Jr. Front End Developer"
+                        title="Network and Information System Intern"
                         location="Algerie Telecom"
-                        date="(2023)"
-                        description="lorem ipsum opsds okpsadp kdsapokdp soakdpjaspd ija[ijdoisaodpihasdi"
+                        date="(03/2024)"
+                        description="I had an amazing oppurtunity to learn about the utilization of information systems for buisiness use "
                     />
                     <XPCard
-                        title="Jr. Front End Developer"
-                        location="Algerie Telecom"
-                        date="(2023)"
-                        description="lorem ipsum opsds okpsadp kdsapokdp soakdpjaspd ija[ijdoisaodpihasdi"
+                        title="Full-stack Dev"
+                        location="Sider"
+                        date="(06~08/2024)"
+                        description="I took on the role of app developer for internal consumption by various departments at an SPA enterprise "
+                    />
+                    <XPCard
+                        title="Machine Learning Eng"
+                        location="Codsoft"
+                        date="(06~08/2024)"
+                        description="I got to take part in a virtuelle internship in Machine Learning which i managed to graduate "
                     />
                 </div>
             )}
 
             {/* Education Section */}
-            {active===2&&(
+            {active === 2 && (
                 <div className="flex flex-col gap-4">
                     <XPCard
-                    title='Computer Sceience'
-                    location='ESTIN'
-                    date='(2022-current)'
-                    description="lorem ipsum opsds okpsadp kdsapokdp soakdpjaspd ija[ijdoisaodpihasdi lorem ipsum opsds okpsadp kdsapokdp soakdpjaspd ija[ijdoisaodpihasdi lorem ipsum opsds okpsadp kdsapokdp soakdpjaspd ija[ijdoisaodpihasdi"
+                        title="Computer Sceience"
+                        location="ESTIN"
+                        date="(2023-current)"
+                        description="Running for State engineer and master II diploma in AI-DS track at My University  "
                     />
                     <XPCard
-                    title='Licence Degree'
-                    location='ESTIN'
-                    date='(2022-current)'
-                    description="lorem ipsum opsds okpsadp kdsapokdp soakdpjaspd ija[ijdoisaodpihasdi lorem ipsum opsds okpsadp kdsapokdp soakdpjaspd ija[ijdoisaodpihasdi lorem ipsum opsds okpsadp kdsapokdp soakdpjaspd ija[ijdoisaodpihasdi"
+                        title="Licence Degree"
+                        location="ESTIN"
+                        date="(2020-2023)"
+                        description="Graduated the equivalent of a Licence Degree from my national school in Computer Sceience "
                     />
-
                 </div>
             )}
         </div>
