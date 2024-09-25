@@ -65,7 +65,7 @@ function MenuModal() {
   },[menuModal])
 
   const bodyContent = (
-      <div className="flex flex-col justify-between  p-4 h-full">
+      <div className="flex flex-col justify-between  p-4 h-full ">
           <div className="flex flex-col gap-3">
               {links.map((link) => (
                   <Link
@@ -85,7 +85,7 @@ function MenuModal() {
 
 
           <div>
-            <h3 className="text-title text-md p-4 mt-[40%] cursor-default">
+            <h3 className="text-title text-md p-4 mt-[40%] lg:mt-[25%] cursor-default">
                 Find me At : 
             </h3>
             <div className="flex flex-row items-center gap-4 ml-4">
@@ -102,8 +102,8 @@ function MenuModal() {
 
 
   const footerContent = (
-    <div className="text-text">
-      Developed By <span className="text-title hover:underline hover:text-orange-200 cursor-default">Achref Souda</span>
+    <div className="text-text lg:mb-32">
+      Developed By <span className="text-title hover:underline hover:text-orange-200 cursor-default ">Achref Souda</span>
     </div>
   )
   return (
@@ -115,7 +115,7 @@ function MenuModal() {
           footer={footerContent}
           onOpen={menuModal.onOpen}
           onClose={menuModal.onClose}
-          fgStyling={`right-0 top-0 h-full pb-10 w-full lg:w-[40%] overflow-y-hidden `}
+          fgStyling={`right-0 top-0 h-full pb-10 lg:pb-32 w-full lg:w-[40%] overflow-y-hidden `}
           pannelAnimation={` animate-sideMenu`}
       />
   )

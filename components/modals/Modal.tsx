@@ -12,6 +12,7 @@ interface ModalProps {
     bgStyling?: string
     clicked: boolean;
     pannelAnimation:string;
+    project?: boolean
 }
 const Modal: React.FC<ModalProps> = ({
     isOpen,
@@ -24,6 +25,7 @@ const Modal: React.FC<ModalProps> = ({
     bgStyling,
     clicked,
     pannelAnimation,
+    project
 }) => {
     const handleClose = useCallback(() => {
         onClose()
@@ -44,12 +46,12 @@ const Modal: React.FC<ModalProps> = ({
                     onClick={handleClose}
                 >
                     <div
-                        className={`absolute  bg-[#1D1B19] rounded-md   px-4 py-10 lg:px-6 lg:py-6 lg:max-w-5xl ${fgStyling}  transition-all ${pannelAnimation} `}
+                        className={`absolute  bg-[#1D1B19] rounded-md  overflow-x-hidden  px-4 py-4 lg:py-10 lg:px-6  lg:max-w-5xl ${fgStyling}  transition-all ${pannelAnimation} ${project?' pb-0 ':''} `}
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/*Header */}
                         <div className="flex flex-row justify-between items-center border-b-grei border-opacity-10 pb-4 border-b-[1px]">
-                            <h1 className="text-title text-3xl lg:text-4xl ml-6 cursor-default">
+                            <h1 className="text-title text-3xl lg:text-4xl ml-4 lg:ml-6 cursor-default">
                                 {title}
                             </h1>
                             <button
@@ -61,10 +63,12 @@ const Modal: React.FC<ModalProps> = ({
                         </div>
 
                         {/* Body */}
-                        <div className="relative  flex-auto overflow-x-hidden  hide-scroll-bar ">{body}</div>
+                        <div className="relative  flex-grow overflow-x-hidden  hide-scroll-bar ">{body}</div>
 
                         {/* Footer */}
-                        {footer && <div className="pl-12">{footer}</div>}
+                        {project ? footer : 
+                        <div className="pl-12">{footer}</div>
+                        }
                     </div>
                 </div>
             }

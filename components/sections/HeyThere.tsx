@@ -16,7 +16,7 @@ function HeyThere() {
                   <span>Hi There ! I Am</span>
                   <div className="flex relative flex-row w-full items-center justify-between pt-2">
                     <span className="text-4xl font-bold text-available">[</span>
-                    <span className="font-semibold text-3xl pt-2 text-title">
+                    <span className="font-semibold text-base md:text-3xl pt-2 text-title">
                         Web Developer
                     </span>
                     <span className="text-4xl font-bold text-available">]</span>
